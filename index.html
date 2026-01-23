@@ -79,24 +79,262 @@
         </div>
     </section>
 
+    <!-- Spacer for fixed hero -->
+    <div class="hero-spacer"></div>
+
     <!-- Intro Section -->
     <section class="intro" id="services">
         <div class="intro-container">
             <h1 class="intro-title">
-                <span class="line"><span class="text-reveal">Dusk Media is a</span></span>
-                <span class="line"><span class="text-reveal highlight">creative digital</span></span>
-                <span class="line"><span class="text-reveal highlight">agency</span> <span class="text-reveal">that helps</span></span>
-                <span class="line"><span class="text-reveal">brands</span> <span class="text-reveal highlight">shine.</span></span>
+                <span class="line"><span class="text-reveal">We help restaurants</span></span>
+                <span class="line"><span class="text-reveal highlight">win more orders</span></span>
+                <span class="line"><span class="text-reveal">by transforming their food into</span></span>
+                <span class="line"><span class="text-reveal highlight">irresistible visuals,</span></span>
+                <span class="line"><span class="text-reveal">high-performing reels, and fully</span></span>
+                <span class="line"><span class="text-reveal">optimized</span> <span class="text-reveal highlight">delivery-app menus</span></span>
+                <span class="line"><span class="text-reveal">that turn online viewers into</span></span>
+                <span class="line"><span class="text-reveal highlight">paying customers.</span></span>
             </h1>
         </div>
         <!-- Mascot -->
-        <div class="mascot">
+        <div class="mascot" id="mascot" onclick="this.classList.toggle('speaking'); setTimeout(() => this.classList.remove('speaking'), 2000);">
+            <div class="mascot-speech">It's true!</div>
             <div class="mascot-body">
-                <span class="mascot-eye">◉</span>
+                <span class="mascot-eye left-eye">◉</span>
                 <span class="mascot-dash">‒</span>
-                <span class="mascot-eye">◉</span>
+                <span class="mascot-eye right-eye">◉</span>
             </div>
         </div>
+    </section>
+
+    <!-- Client Showcase - Liquid Glass Carousel -->
+    <section class="client-showcase">
+        <div class="glass-container">
+            <h2 class="showcase-title">Work We're Proud Of</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <!-- First set of items -->
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza Paradise">
+                            </div>
+                            <p class="client-name">Pizza Paradise</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Fresh & Green">
+                            </div>
+                            <p class="client-name">Fresh & Green</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" alt="Sunrise Cafe">
+                            </div>
+                            <p class="client-name">Sunrise Cafe</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl & Soul">
+                            </div>
+                            <p class="client-name">Bowl & Soul</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=400&fit=crop" alt="Burger Barn">
+                            </div>
+                            <p class="client-name">Burger Barn</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=400&fit=crop" alt="Pasta House">
+                            </div>
+                            <p class="client-name">Pasta House</p>
+                        </div>
+                    </div>
+                    <!-- Duplicate set for infinite loop -->
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza Paradise">
+                            </div>
+                            <p class="client-name">Pizza Paradise</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Fresh & Green">
+                            </div>
+                            <p class="client-name">Fresh & Green</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" alt="Sunrise Cafe">
+                            </div>
+                            <p class="client-name">Sunrise Cafe</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl & Soul">
+                            </div>
+                            <p class="client-name">Bowl & Soul</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=400&fit=crop" alt="Burger Barn">
+                            </div>
+                            <p class="client-name">Burger Barn</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client-card">
+                            <div class="client-image">
+                                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=400&fit=crop" alt="Pasta House">
+                            </div>
+                            <p class="client-name">Pasta House</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Filter Gallery -->
+        <div class="filter-gallery">
+            <div class="filter-toggles">
+                <button type="button" class="filter-btn active" onclick="filterGallery('pizza', this)">Pizza</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('burgers', this)">Burgers</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('coffee', this)">Coffee</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('desserts', this)">Desserts</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('bowls', this)">Bowls</button>
+            </div>
+            <div class="filter-grid" id="filterGrid">
+                <!-- Pizza -->
+                <div class="filter-item" data-category="pizza">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza">
+                </div>
+                <div class="filter-item" data-category="pizza">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=400&fit=crop" alt="Pizza">
+                </div>
+                <div class="filter-item" data-category="pizza">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&h=400&fit=crop" alt="Pizza">
+                </div>
+                <div class="filter-item" data-category="pizza">
+                    <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400&h=400&fit=crop" alt="Pizza">
+                </div>
+                <!-- Burgers -->
+                <div class="filter-item" data-category="burgers" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Burger">
+                </div>
+                <div class="filter-item" data-category="burgers" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=400&fit=crop" alt="Burger">
+                </div>
+                <div class="filter-item" data-category="burgers" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=400&fit=crop" alt="Burger">
+                </div>
+                <div class="filter-item" data-category="burgers" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=400&fit=crop" alt="Burger">
+                </div>
+                <!-- Coffee -->
+                <div class="filter-item" data-category="coffee" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop" alt="Coffee">
+                </div>
+                <div class="filter-item" data-category="coffee" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Coffee">
+                </div>
+                <div class="filter-item" data-category="coffee" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Coffee">
+                </div>
+                <div class="filter-item" data-category="coffee" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop" alt="Coffee">
+                </div>
+                <!-- Desserts -->
+                <div class="filter-item" data-category="desserts" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop" alt="Dessert">
+                </div>
+                <div class="filter-item" data-category="desserts" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop" alt="Dessert">
+                </div>
+                <div class="filter-item" data-category="desserts" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=400&fit=crop" alt="Dessert">
+                </div>
+                <div class="filter-item" data-category="desserts" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=400&fit=crop" alt="Dessert">
+                </div>
+                <!-- Bowls -->
+                <div class="filter-item" data-category="bowls" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl">
+                </div>
+                <div class="filter-item" data-category="bowls" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Bowl">
+                </div>
+                <div class="filter-item" data-category="bowls" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Bowl">
+                </div>
+                <div class="filter-item" data-category="bowls" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop" alt="Bowl">
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function filterGallery(category, btn) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Update active button
+            var buttons = document.querySelectorAll('.filter-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            btn.classList.add('active');
+
+            // Filter items
+            var items = document.querySelectorAll('.filter-item');
+            var delay = 0;
+
+            for (var j = 0; j < items.length; j++) {
+                var item = items[j];
+                var itemCategory = item.getAttribute('data-category');
+
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+
+                    (function(el, d) {
+                        setTimeout(function() {
+                            el.style.transition = 'all 0.4s ease';
+                            el.style.opacity = '1';
+                            el.style.transform = 'scale(1)';
+                        }, d * 1000);
+                    })(item, delay);
+
+                    delay += 0.08;
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+
+            return false;
+        }
+        </script>
     </section>
 
     <!-- Zigzag Divider -->

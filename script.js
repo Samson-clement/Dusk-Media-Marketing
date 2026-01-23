@@ -193,8 +193,10 @@ function showNotification(message, type = 'info') {
 }
 
 // ===== Mascot Animation =====
-const mascot = document.querySelector('.mascot-body');
-if (mascot) {
+const mascotBody = document.querySelector('.mascot-body');
+const mascotContainer = document.querySelector('.mascot');
+
+if (mascotBody) {
     document.addEventListener('touchmove', (e) => {
         const touch = e.touches[0];
         animateMascotEyes(touch.clientX, touch.clientY);
@@ -204,6 +206,7 @@ if (mascot) {
         animateMascotEyes(e.clientX, e.clientY);
     }, { passive: true });
 }
+
 
 function animateMascotEyes(x, y) {
     const mascot = document.querySelector('.mascot-body');
@@ -279,3 +282,5 @@ const pricingObserver = new IntersectionObserver((entries) => {
 if (pricingCards.length > 0) {
     pricingObserver.observe(pricingCards[0]);
 }
+
+
