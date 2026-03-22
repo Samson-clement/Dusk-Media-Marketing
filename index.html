@@ -366,64 +366,118 @@
             </div>
         </section>
 
-        <!-- Project Grid -->
-        <section class="py-32 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex justify-between items-end mb-16">
-                    <h2 class="font-headline font-bold text-5xl tracking-tighter">Project <br/><span class="text-primary">Chronicles.</span></h2>
-                    <div class="hidden md:block">
-                        <button class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant group">
-                            Explore Archive
-                            <span class="w-12 h-[1px] bg-primary group-hover:w-16 transition-all duration-500"></span>
-                        </button>
+        <!-- Testimonials -->
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto text-center mb-16">
+                <span class="font-label text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-4">What They Say</span>
+                <h2 class="font-headline font-bold text-3xl md:text-4xl tracking-tighter text-on-surface">Loved by our clients.</h2>
+            </div>
+            <div style="height:20rem; width:100%; display:flex; align-items:center; justify-content:center;">
+                <div id="testimonialStack" style="position:relative; width:320px; height:260px; cursor:grab;"></div>
+            </div>
+            <div id="testimonialDots" style="display:flex; justify-content:center; gap:8px; margin-top:24px;"></div>
+        </section>
+
+        <!-- Container Scroll Animation -->
+        <section id="scrollContainer" style="height:60rem; display:flex; align-items:center; justify-content:center; position:relative; padding:20px; margin-top:0;">
+            <div style="padding:40px 0; width:100%; position:relative; perspective:1000px;">
+                <!-- Header -->
+                <div id="scrollHeader" style="max-width:64rem; margin:0 auto; text-align:center; will-change:transform;">
+                    <span class="font-label text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-4">Beyond Marketing</span>
+                    <h2 class="font-headline font-bold text-4xl md:text-6xl tracking-tighter text-on-surface mb-4">We also create<br/><span class="text-primary italic">beautiful menus</span> for your restaurant.</h2>
+                    <p class="font-body text-secondary text-lg max-w-xl mx-auto">Stunning digital menus designed to make every dish irresistible and drive more orders.</p>
+                </div>
+                <!-- Card (Tablet Mockup) -->
+                <div id="scrollCard" style="max-width:64rem; margin:-48px auto 0; width:100%; height:40rem; border:4px solid #6C6C6C; padding:24px; background:#222222; border-radius:30px; will-change:transform; box-shadow:0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;">
+                    <div style="height:100%; width:100%; overflow-y:auto; border-radius:16px; background:#faf8f5; padding:32px 24px; font-family:Manrope,sans-serif;">
+                        <!-- Menu Header -->
+                        <div style="text-align:center; margin-bottom:32px; border-bottom:2px solid #fe8e24; padding-bottom:24px;">
+                            <h3 style="font-family:Epilogue,sans-serif; font-size:1.8rem; font-weight:800; color:#1a1c1c; letter-spacing:-0.02em;">The Golden Fork</h3>
+                            <p style="font-size:0.75rem; color:#888; text-transform:uppercase; letter-spacing:0.2em; margin-top:6px;">Est. 2019 &middot; Fine Dining</p>
+                        </div>
+                        <!-- Starters -->
+                        <div style="margin-bottom:28px;">
+                            <h4 style="font-family:Epilogue,sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.25em; color:#fe8e24; margin-bottom:16px;">Starters</h4>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Truffle Burrata</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Fresh burrata, black truffle, heirloom tomatoes, basil oil</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$18</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Tuna Tartare</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Yellowfin tuna, avocado mousse, crispy wonton, yuzu</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$22</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Lobster Bisque</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Creamy bisque, cognac cream, chive oil, croutons</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$16</span>
+                            </div>
+                        </div>
+                        <!-- Mains -->
+                        <div style="margin-bottom:28px;">
+                            <h4 style="font-family:Epilogue,sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.25em; color:#fe8e24; margin-bottom:16px;">Mains</h4>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Wagyu Ribeye</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">A5 wagyu, truffle jus, roasted garlic mash, seasonal greens</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$65</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Pan-Seared Sea Bass</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Chilean sea bass, saffron risotto, beurre blanc, capers</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$42</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Lamb Rack</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Herb-crusted lamb, pomme puree, red wine reduction, mint</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$48</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Wild Mushroom Risotto</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Porcini, chanterelle, parmesan, white truffle oil</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$28</span>
+                            </div>
+                        </div>
+                        <!-- Desserts -->
+                        <div style="margin-bottom:16px;">
+                            <h4 style="font-family:Epilogue,sans-serif; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.25em; color:#fe8e24; margin-bottom:16px;">Desserts</h4>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Cr&egrave;me Br&ucirc;l&eacute;e</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Tahitian vanilla bean, caramelized sugar, fresh berries</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$14</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                                <div>
+                                    <span style="font-weight:700; color:#1a1c1c; font-size:0.95rem;">Chocolate Fondant</span>
+                                    <p style="font-size:0.8rem; color:#888; margin-top:2px;">Valrhona dark chocolate, molten center, vanilla gelato</p>
+                                </div>
+                                <span style="font-weight:700; color:#1a1c1c; white-space:nowrap; margin-left:16px;">$16</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-                    <!-- Project 1: Vertical -->
-                    <div class="md:col-span-5 group cursor-pointer">
-                        <div class="aspect-[4/5] overflow-hidden rounded-xl relative glass-card hover-reveal">
-                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R"/>
-                            <div class="absolute inset-0 bg-black/40 overlay flex items-center justify-center backdrop-blur-sm">
-                                <span class="text-white font-bold tracking-widest text-xs uppercase border border-white/30 px-6 py-3 rounded-full">View Narrative</span>
-                            </div>
-                        </div>
-                        <div class="mt-8 transition-transform group-hover:translate-x-2 duration-300">
-                            <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Cinematography / 2024</span>
-                            <h4 class="font-headline font-bold text-xl mt-2">Inner Light Study</h4>
-                        </div>
-                    </div>
-                    <!-- Project 2 & 3 -->
-                    <div class="md:col-span-7 flex flex-col gap-12">
-                        <div class="aspect-[16/9] overflow-hidden rounded-xl relative group glass-card hover-reveal cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi"/>
-                            <div class="absolute top-6 right-6">
-                                <span class="bg-white/30 backdrop-blur-md border border-white/40 px-3 py-1 rounded-full text-white text-[10px] uppercase font-bold">Featured Production</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 overlay flex items-center justify-center backdrop-blur-sm">
-                                <span class="text-white font-bold tracking-widest text-xs uppercase border border-white/30 px-6 py-3 rounded-full">Explore Setup</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-12">
-                            <div class="group cursor-pointer">
-                                <div class="aspect-square overflow-hidden rounded-xl relative glass-card hover-reveal">
-                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy"/>
-                                </div>
-                                <div class="mt-6 transition-transform group-hover:translate-x-2 duration-300">
-                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-widest">Editorial</span>
-                                    <h4 class="font-headline font-bold text-lg mt-1">Brutalist Echoes</h4>
-                                </div>
-                            </div>
-                            <div class="group cursor-pointer">
-                                <div class="aspect-square overflow-hidden rounded-xl relative glass-card hover-reveal">
-                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR"/>
-                                </div>
-                                <div class="mt-6 transition-transform group-hover:translate-x-2 duration-300">
-                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-widest">BTS</span>
-                                    <h4 class="font-headline font-bold text-lg mt-1">The Process</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- View Live Button -->
+                <div style="text-align:center; margin-top:40px;">
+                    <a href="#" target="_blank" class="inline-flex items-center gap-3 px-10 py-5 rounded-full font-bold text-white text-sm tracking-wide transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group" style="background:linear-gradient(135deg, #fe8e24 0%, #f0a04b 100%); box-shadow:0 8px 30px rgba(254,142,36,0.3);">
+                        <span class="font-label uppercase tracking-[0.1em]">View Live Example</span>
+                        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform duration-300">open_in_new</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -673,6 +727,180 @@
 
         // Auto-advance every 5 seconds
         setInterval(function() { if (!isDragging) goTo(currentSlide + 1); }, 5000);
+    })();
+
+    // Testimonial Carousel
+    (function() {
+        var testimonials = [
+            { name: 'Sarah Mitchell', avatar: 'https://i.pravatar.cc/150?img=1', desc: '"Dusk Media completely transformed our restaurant\'s online presence. Orders went up 40% in the first month. Absolutely incredible work!"' },
+            { name: 'James Rodriguez', avatar: 'https://i.pravatar.cc/150?img=3', desc: '"The menus they designed are stunning. Our customers always comment on how beautiful everything looks. Best investment we\'ve made."' },
+            { name: 'Emily Chen', avatar: 'https://i.pravatar.cc/150?img=5', desc: '"Professional, creative, and they truly understand the food industry. Our social media engagement tripled after working with them."' },
+            { name: 'Marcus Thompson', avatar: 'https://i.pravatar.cc/150?img=8', desc: '"From branding to delivery-app optimization, Dusk Media handled everything. Our revenue has never been better."' },
+            { name: 'Olivia Park', avatar: 'https://i.pravatar.cc/150?img=9', desc: '"They captured our food in a way we never thought possible. The photography alone was worth it. Highly recommend!"' },
+        ];
+
+        var stack = document.getElementById('testimonialStack');
+        var dotsContainer = document.getElementById('testimonialDots');
+        var currentIndex = 0;
+        var isDragging = false;
+        var startX = 0;
+        var offsetX = 0;
+        var cards = [];
+
+        // Create dots
+        testimonials.forEach(function(_, i) {
+            var dot = document.createElement('div');
+            dot.style.cssText = 'width:8px; height:8px; border-radius:50%; transition:all 0.3s;';
+            dot.style.background = i === 0 ? '#fe8e24' : '#d4d4d4';
+            dotsContainer.appendChild(dot);
+        });
+
+        // Build all cards once
+        testimonials.forEach(function(t, i) {
+            var card = document.createElement('div');
+            card.style.cssText = 'position:absolute; width:100%; height:100%; border-radius:16px; background:white; box-shadow:0 10px 40px rgba(0,0,0,0.1); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; will-change:transform,opacity; user-select:none; -webkit-user-select:none;';
+            card.innerHTML = '<img src="' + t.avatar + '" alt="' + t.name + '" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:3px solid #fff0e0; pointer-events:none;">' +
+                '<h3 style="font-family:Epilogue,sans-serif; font-size:1.1rem; font-weight:700; color:#1a1c1c; pointer-events:none;">' + t.name + '</h3>' +
+                '<p style="text-align:center; font-size:0.85rem; color:#5f5e5e; line-height:1.6; pointer-events:none;">' + t.desc + '</p>';
+            stack.appendChild(card);
+            cards.push(card);
+        });
+
+        function updateCards(animate) {
+            var len = testimonials.length;
+            cards.forEach(function(card, i) {
+                var diff = (i - currentIndex + len) % len;
+                var show = diff <= 2;
+                if (!show) {
+                    card.style.display = 'none';
+                    return;
+                }
+                card.style.display = 'flex';
+                var tr = animate ? 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.35s ease' : 'none';
+                card.style.transition = tr;
+
+                if (diff === 0) {
+                    // Current card
+                    card.style.zIndex = 3;
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateX(' + offsetX + 'px) rotate(' + (offsetX / 25) + 'deg) scale(1)';
+                } else if (diff === 1) {
+                    card.style.zIndex = 2;
+                    card.style.opacity = 0.6;
+                    card.style.transform = 'translateY(10px) rotate(-2deg) scale(0.95)';
+                } else {
+                    card.style.zIndex = 1;
+                    card.style.opacity = 0.3;
+                    card.style.transform = 'translateY(20px) rotate(-4deg) scale(0.9)';
+                }
+            });
+
+            // Update dots
+            var dots = dotsContainer.children;
+            for (var d = 0; d < dots.length; d++) {
+                dots[d].style.background = d === currentIndex ? '#fe8e24' : '#d4d4d4';
+                dots[d].style.width = d === currentIndex ? '20px' : '8px';
+            }
+        }
+
+        function advance(dir) {
+            var len = testimonials.length;
+            currentIndex = (currentIndex + dir + len) % len;
+            offsetX = 0;
+            updateCards(true);
+        }
+
+        window.testimonialNav = function(dir) { advance(dir); };
+
+        // Mouse drag
+        stack.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            startX = e.clientX;
+            offsetX = 0;
+            stack.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            offsetX = e.clientX - startX;
+            updateCards(false);
+        });
+        document.addEventListener('mouseup', function() {
+            if (!isDragging) return;
+            isDragging = false;
+            stack.style.cursor = 'grab';
+            if (Math.abs(offsetX) > 60) {
+                advance(offsetX < 0 ? 1 : -1);
+            } else {
+                offsetX = 0;
+                updateCards(true);
+            }
+        });
+
+        // Touch drag
+        stack.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            offsetX = 0;
+        }, { passive: true });
+        stack.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            offsetX = e.touches[0].clientX - startX;
+            updateCards(false);
+        }, { passive: true });
+        stack.addEventListener('touchend', function() {
+            isDragging = false;
+            if (Math.abs(offsetX) > 60) {
+                advance(offsetX < 0 ? 1 : -1);
+            } else {
+                offsetX = 0;
+                updateCards(true);
+            }
+        });
+
+        updateCards(false);
+    })();
+
+    // Container Scroll Animation
+    (function() {
+        var container = document.getElementById('scrollContainer');
+        var card = document.getElementById('scrollCard');
+        var header = document.getElementById('scrollHeader');
+        var isMobile = window.innerWidth <= 768;
+
+        window.addEventListener('resize', function() {
+            isMobile = window.innerWidth <= 768;
+        });
+
+        function lerp(start, end, t) {
+            return start + (end - start) * t;
+        }
+
+        function updateScroll() {
+            var rect = container.getBoundingClientRect();
+            var windowH = window.innerHeight;
+            var containerH = container.offsetHeight;
+
+            // Progress: 0 when top of container hits bottom of viewport, 1 when bottom hits top
+            var progress = (windowH - rect.top) / (windowH + containerH);
+            progress = Math.max(0, Math.min(1, progress));
+
+            // Rotate: 20deg -> 0deg
+            var rotate = lerp(20, 0, progress);
+            // Scale: mobile 0.7->0.9, desktop 1.05->1
+            var scaleStart = isMobile ? 0.7 : 1.05;
+            var scaleEnd = isMobile ? 0.9 : 1;
+            var scale = lerp(scaleStart, scaleEnd, progress);
+            // Translate header: 0 -> -100px
+            var translate = lerp(0, -100, progress);
+
+            card.style.transform = 'rotateX(' + rotate + 'deg) scale(' + scale + ')';
+            header.style.transform = 'translateY(' + translate + 'px)';
+
+            requestAnimationFrame(updateScroll);
+        }
+
+        requestAnimationFrame(updateScroll);
     })();
 
     // Before & After Slider
