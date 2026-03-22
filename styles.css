@@ -13,6 +13,7 @@ html, body {
     --color-yellow: #F4D03F;
     --color-pink: #FADBD8;
     --color-mint: #e6ffd7;
+    --color-purple: #1f0f30;
     --color-bg: #ffffff;
     --color-bg-light: #fafafa;
     --color-text: #1a1a1a;
@@ -71,15 +72,16 @@ ul {
 }
 
 .logo-img {
-    height: 48px;
+    height: 120px;
     width: auto;
     display: block;
+    margin: -36px 0;
 }
 
 .menu-btn {
     background: none;
     border: none;
-    color: white;
+    color: var(--color-text);
     font-family: var(--font-primary);
     font-size: 1rem;
     font-weight: 500;
@@ -88,14 +90,19 @@ ul {
 
 /* ===== Mobile Menu ===== */
 .nav-container {
-    background: #1a1325;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     border-radius: 28px;
-    overflow: hidden;
-    transition: border-radius 0.3s ease;
+    overflow: visible;
+    transition: border-radius 0.3s ease, background 0.3s ease;
 }
 
 .nav-container.menu-open {
     border-radius: 28px;
+    overflow: hidden;
 }
 
 .nav-pill {
@@ -128,7 +135,7 @@ ul {
 }
 
 .menu-links a {
-    color: white;
+    color: var(--color-text);
     font-family: var(--font-primary);
     font-size: 1.2rem;
     font-weight: 500;
@@ -156,14 +163,14 @@ ul {
 .menu-links a.menu-contact-btn {
     margin-top: 12px;
     padding: 10px 24px;
-    border: 1.5px solid rgba(255,255,255,0.8);
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
     border-radius: 100px;
     font-size: 1.05rem;
 }
 
 .menu-links a.menu-contact-btn:hover {
-    background: white;
-    color: var(--color-text);
+    background: var(--color-text);
+    color: white;
 }
 
 /* ===== Hero Section ===== */
@@ -224,6 +231,10 @@ ul {
     letter-spacing: 0.12em;
     color: var(--color-text);
     text-transform: uppercase;
+}
+
+.text-purple {
+    color: var(--color-purple);
 }
 
 /* ===== Intro Section ===== */

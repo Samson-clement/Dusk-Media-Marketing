@@ -6,16 +6,178 @@
     <title>Dusk Media | Marketing Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#474746",
+              "surface-dim": "#dadada",
+              "on-error": "#ffffff",
+              "surface-bright": "#f9f9f9",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eeeeee",
+              "inverse-primary": "#ffc97a",
+              "inverse-surface": "#2f3131",
+              "inverse-on-surface": "#f0f1f1",
+              "secondary": "#5f5e5e",
+              "on-primary-container": "#7a4400",
+              "outline-variant": "#f0d4a8",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#00304a",
+              "on-surface": "#1a1c1c",
+              "surface-container-high": "#e8e8e8",
+              "on-background": "#1a1c1c",
+              "on-primary-fixed": "#4a2800",
+              "primary-container": "#fe8e24",
+              "surface": "#f9f9f9",
+              "primary-fixed-dim": "#ffc97a",
+              "on-tertiary-fixed-variant": "#004b70",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#001e30",
+              "on-secondary-fixed": "#1c1b1b",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#006493",
+              "on-secondary-container": "#636262",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#009de4",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#cae6ff",
+              "primary": "#fe8e24",
+              "primary-fixed": "#fff0e0",
+              "outline": "#8f7066",
+              "secondary-fixed-dim": "#c8c6c5",
+              "tertiary-fixed-dim": "#8dcdff",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#e5e2e1",
+              "surface-tint": "#fe8e24",
+              "surface-variant": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "on-surface-variant": "#5b4138",
+              "on-primary-fixed-variant": "#b56a00",
+              "background": "#f9f9f9",
+              "secondary-container": "#e2dfde"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px rgba(26, 28, 28, 0.06);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .glass-button {
+            background: rgba(254, 142, 36, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            background: rgba(254, 142, 36, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(254, 142, 36, 0.2);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #fe8e24 0%, #fe8e24 100%);
+        }
+        .animated-bg {
+            background: linear-gradient(-45deg, #f9f9f9, #fff0e0, #f3f3f3, #e5e2e1);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .hover-reveal img {
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .hover-reveal:hover img {
+            transform: scale(1.08);
+        }
+        .hover-reveal .overlay {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .hover-reveal:hover .overlay {
+            opacity: 1;
+        }
+        .atmosphere-control {
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #f0d4a8;
+            border-radius: 2px;
+            outline: none;
+        }
+        .atmosphere-control::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #fe8e24;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .atmosphere-control::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee-slow {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-slow {
+            animation: marquee-slow 25s linear infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased animated-bg">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-pill" id="navPill">
-                <a href="#" class="logo"><img src="assets/logoduskmedia.png" alt="Dusk Media" class="logo-img"></a>
-                <button class="menu-btn" id="menuBtn">Menu</button>
+                <a href="#" class="logo"><img src="assets/logoduskmedia.svg" alt="Dusk Media" class="logo-img"></a>
+                <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
             </div>
             <!-- Mobile Menu - Now inside nav-container -->
             <div class="mobile-menu" id="mobileMenu">
@@ -31,563 +193,678 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo-section">
-                <!-- D Letter -->
-                <div class="hero-letter">
-                    <svg viewBox="0 0 120 150" class="letter-d">
-                        <path d="M15 15 L15 135 L60 135 Q105 135 105 75 Q105 15 60 15 Z" fill="#2D5A3D"/>
-                        <circle cx="60" cy="75" r="28" fill="white"/>
-                    </svg>
-                </div>
-                <!-- U Letter - Credit Card -->
-                <div class="hero-letter">
-                    <svg viewBox="0 0 100 120" class="letter-icon">
-                        <rect x="10" y="25" width="80" height="55" rx="8" fill="#5DADE2"/>
-                        <rect x="10" y="25" width="80" height="18" fill="#3498DB"/>
-                        <rect x="20" y="55" width="35" height="8" rx="2" fill="#F4D03F"/>
-                        <text x="20" y="73" font-size="6" fill="white" font-family="monospace">1234 5678 9000</text>
-                    </svg>
-                </div>
-                <!-- S Letter - Bookmark/Tag -->
-                <div class="hero-letter">
-                    <svg viewBox="0 0 60 120" class="letter-icon">
-                        <rect x="10" y="20" width="40" height="85" rx="4" fill="#F4D03F"/>
-                        <path d="M10 85 L30 100 L50 85" fill="#E5BE34"/>
-                    </svg>
-                </div>
-                <!-- K Letter - Envelope -->
-                <div class="hero-letter">
-                    <svg viewBox="0 0 100 100" class="letter-icon">
-                        <rect x="10" y="25" width="80" height="55" rx="4" fill="#FADBD8"/>
-                        <path d="M10 25 L50 55 L90 25" stroke="#E8B4B8" stroke-width="2" fill="none"/>
-                        <line x1="10" y1="80" x2="35" y2="55" stroke="#E8B4B8" stroke-width="2"/>
-                        <line x1="90" y1="80" x2="65" y2="55" stroke="#E8B4B8" stroke-width="2"/>
-                    </svg>
-                </div>
-                <!-- Last Letter - Circle with accent -->
-                <div class="hero-letter">
-                    <svg viewBox="0 0 100 120" class="letter-icon">
-                        <circle cx="50" cy="65" r="40" fill="none" stroke="#fe8e24" stroke-width="12"/>
-                        <path d="M70 20 Q85 10 75 25" stroke="#fe8e24" stroke-width="8" fill="none" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </div>
-            <p class="hero-tagline">DUSK MEDIA, THE AGENCY FOR BRANDS!</p>
-        </div>
-    </section>
-
-    <!-- Spacer for fixed hero -->
-    <div class="hero-spacer"></div>
-
-    <!-- Intro Section -->
-    <section class="intro" id="services">
-        <div class="intro-container">
-            <h1 class="intro-title">
-                <span class="line"><span class="text-reveal">We help restaurants</span></span>
-                <span class="line"><span class="text-reveal highlight">win more orders</span></span>
-                <span class="line"><span class="text-reveal">by transforming their food into</span></span>
-                <span class="line"><span class="text-reveal highlight">irresistible visuals,</span></span>
-                <span class="line"><span class="text-reveal">high-performing reels, and fully</span></span>
-                <span class="line"><span class="text-reveal">optimized</span> <span class="text-reveal highlight">delivery-app menus</span></span>
-                <span class="line"><span class="text-reveal">that turn online viewers into</span></span>
-                <span class="line"><span class="text-reveal highlight">paying customers.</span></span>
-            </h1>
-        </div>
-        <!-- Mascot -->
-        <div class="mascot" id="mascot" onclick="this.classList.toggle('speaking'); setTimeout(() => this.classList.remove('speaking'), 2000);">
-            <div class="mascot-speech">It's true!</div>
-            <div class="mascot-body">
-                <span class="mascot-eye left-eye">◉</span>
-                <span class="mascot-dash">‒</span>
-                <span class="mascot-eye right-eye">◉</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Showcase - Liquid Glass Carousel -->
-    <section class="client-showcase">
-        <div class="glass-container">
-            <h2 class="showcase-title">Work We're Proud Of</h2>
-            <div class="carousel-wrapper">
-                <div class="carousel-track">
-                    <!-- First set of items -->
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza Paradise">
-                            </div>
-                            <p class="client-name">Pizza Paradise</p>
+    <main class="pt-36 overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="relative w-full px-4 md:px-8 mb-24">
+            <div class="max-w-lg mx-auto relative" style="height: 85vh; min-height: 600px;" id="heroCarousel">
+                <!-- Background image (full card) -->
+                <div class="absolute inset-0 rounded-3xl overflow-hidden" id="heroBgImage">
+                    <div class="carousel-hero-track" id="heroTrack" style="display:flex; height:100%; transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);">
+                        <div class="carousel-hero-slide" style="min-width:100%; height:100%; position:relative;"
+                             data-label="FEATURED WORK" data-title="Midnight in Provence" data-desc="Capturing the essence of golden hour through cinematic storytelling.">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc"/>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Fresh & Green">
-                            </div>
-                            <p class="client-name">Fresh & Green</p>
+                        <div class="carousel-hero-slide" style="min-width:100%; height:100%; position:relative;"
+                             data-label="CINEMATOGRAPHY" data-title="Inner Light Study" data-desc="Exploring the interplay of shadow and natural illumination.">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R"/>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" alt="Sunrise Cafe">
-                            </div>
-                            <p class="client-name">Sunrise Cafe</p>
+                        <div class="carousel-hero-slide" style="min-width:100%; height:100%; position:relative;"
+                             data-label="PRODUCTION" data-title="Golden Hour Sessions" data-desc="Where brand stories meet the magic of dusk lighting.">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi"/>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl & Soul">
-                            </div>
-                            <p class="client-name">Bowl & Soul</p>
+                        <div class="carousel-hero-slide" style="min-width:100%; height:100%; position:relative;"
+                             data-label="EDITORIAL" data-title="Brutalist Echoes" data-desc="Bold architectural narratives for modern brand identities.">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy"/>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=400&fit=crop" alt="Burger Barn">
-                            </div>
-                            <p class="client-name">Burger Barn</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=400&fit=crop" alt="Pasta House">
-                            </div>
-                            <p class="client-name">Pasta House</p>
-                        </div>
-                    </div>
-                    <!-- Duplicate set for infinite loop -->
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza Paradise">
-                            </div>
-                            <p class="client-name">Pizza Paradise</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Fresh & Green">
-                            </div>
-                            <p class="client-name">Fresh & Green</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop" alt="Sunrise Cafe">
-                            </div>
-                            <p class="client-name">Sunrise Cafe</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl & Soul">
-                            </div>
-                            <p class="client-name">Bowl & Soul</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=400&fit=crop" alt="Burger Barn">
-                            </div>
-                            <p class="client-name">Burger Barn</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client-card">
-                            <div class="client-image">
-                                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=400&fit=crop" alt="Pasta House">
-                            </div>
-                            <p class="client-name">Pasta House</p>
+                        <div class="carousel-hero-slide" style="min-width:100%; height:100%; position:relative;"
+                             data-label="BEHIND THE SCENES" data-title="The Process" data-desc="A look into how we craft visual stories for brands.">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR"/>
                         </div>
                     </div>
                 </div>
+
+                <!-- Glass info card overlapping bottom -->
+                <div class="absolute bottom-6 left-4 right-4 z-30 bg-white/75 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-white/50 shadow-lg" id="heroInfoCard">
+                    <span class="text-primary font-label text-xs font-bold tracking-[0.2em] uppercase block mb-3" id="heroLabel">FEATURED WORK</span>
+                    <h2 class="font-headline font-bold text-3xl md:text-4xl tracking-tight text-on-surface leading-tight mb-3" id="heroTitle">Midnight in Provence</h2>
+                    <p class="font-body text-secondary text-sm mb-6" id="heroDesc">Capturing the essence of golden hour through cinematic storytelling.</p>
+                    <button class="w-full py-4 rounded-full font-bold text-white tracking-wide text-sm" style="background: linear-gradient(135deg, #fe8e24 0%, #f0a04b 100%); box-shadow: 0 8px 24px rgba(254, 142, 36, 0.35);">VIEW STORY</button>
+                </div>
+
+                <!-- Dots indicator -->
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-40 flex gap-2" id="heroDots"></div>
             </div>
-        </div>
+        </section>
 
-        <!-- Category Filter Gallery -->
-        <div class="filter-gallery">
-            <div class="filter-toggles">
-                <button type="button" class="filter-btn active" onclick="filterGallery('pizza', this)">Pizza</button>
-                <button type="button" class="filter-btn" onclick="filterGallery('burgers', this)">Burgers</button>
-                <button type="button" class="filter-btn" onclick="filterGallery('coffee', this)">Coffee</button>
-                <button type="button" class="filter-btn" onclick="filterGallery('desserts', this)">Desserts</button>
-                <button type="button" class="filter-btn" onclick="filterGallery('bowls', this)">Bowls</button>
-            </div>
-            <div class="filter-grid" id="filterGrid">
-                <!-- Pizza -->
-                <div class="filter-item" data-category="pizza">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Pizza">
-                </div>
-                <div class="filter-item" data-category="pizza">
-                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=400&fit=crop" alt="Pizza">
-                </div>
-                <div class="filter-item" data-category="pizza">
-                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&h=400&fit=crop" alt="Pizza">
-                </div>
-                <div class="filter-item" data-category="pizza">
-                    <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400&h=400&fit=crop" alt="Pizza">
-                </div>
-                <!-- Burgers -->
-                <div class="filter-item" data-category="burgers" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Burger">
-                </div>
-                <div class="filter-item" data-category="burgers" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=400&fit=crop" alt="Burger">
-                </div>
-                <div class="filter-item" data-category="burgers" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=400&fit=crop" alt="Burger">
-                </div>
-                <div class="filter-item" data-category="burgers" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=400&fit=crop" alt="Burger">
-                </div>
-                <!-- Coffee -->
-                <div class="filter-item" data-category="coffee" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop" alt="Coffee">
-                </div>
-                <div class="filter-item" data-category="coffee" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Coffee">
-                </div>
-                <div class="filter-item" data-category="coffee" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Coffee">
-                </div>
-                <div class="filter-item" data-category="coffee" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop" alt="Coffee">
-                </div>
-                <!-- Desserts -->
-                <div class="filter-item" data-category="desserts" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop" alt="Dessert">
-                </div>
-                <div class="filter-item" data-category="desserts" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop" alt="Dessert">
-                </div>
-                <div class="filter-item" data-category="desserts" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=400&fit=crop" alt="Dessert">
-                </div>
-                <div class="filter-item" data-category="desserts" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=400&fit=crop" alt="Dessert">
-                </div>
-                <!-- Bowls -->
-                <div class="filter-item" data-category="bowls" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" alt="Bowl">
-                </div>
-                <div class="filter-item" data-category="bowls" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Bowl">
-                </div>
-                <div class="filter-item" data-category="bowls" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Bowl">
-                </div>
-                <div class="filter-item" data-category="bowls" style="display: none;">
-                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop" alt="Bowl">
-                </div>
-            </div>
-        </div>
-
-        <script>
-        function filterGallery(category, btn) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            // Update active button
-            var buttons = document.querySelectorAll('.filter-btn');
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove('active');
-            }
-            btn.classList.add('active');
-
-            // Filter items
-            var items = document.querySelectorAll('.filter-item');
-            var delay = 0;
-
-            for (var j = 0; j < items.length; j++) {
-                var item = items[j];
-                var itemCategory = item.getAttribute('data-category');
-
-                if (category === 'all' || itemCategory === category) {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-
-                    (function(el, d) {
-                        setTimeout(function() {
-                            el.style.transition = 'all 0.4s ease';
-                            el.style.opacity = '1';
-                            el.style.transform = 'scale(1)';
-                        }, d * 1000);
-                    })(item, delay);
-
-                    delay += 0.08;
-                } else {
-                    item.style.display = 'none';
-                }
-            }
-
-            return false;
-        }
-        </script>
-    </section>
-
-    <!-- Zigzag Divider -->
-    <div class="zigzag-divider">
-        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-            <path d="M0 30 L40 0 L80 30 L120 0 L160 30 L200 0 L240 30 L280 0 L320 30 L360 0 L400 30 L440 0 L480 30 L520 0 L560 30 L600 0 L640 30 L680 0 L720 30 L760 0 L800 30 L840 0 L880 30 L920 0 L960 30 L1000 0 L1040 30 L1080 0 L1120 30 L1160 0 L1200 30 L1200 60 L0 60 Z" fill="#fe8e24"/>
-        </svg>
-    </div>
-
-    <!-- Branding Section -->
-    <section class="feature-section" id="branding">
-        <div class="feature-container">
-            <div class="feature-content">
-                <h2 class="feature-title">
-                    <span class="line"><span class="text-reveal">Build your</span></span>
-                    <span class="line"><span class="text-reveal highlight">brand identity</span></span>
-                </h2>
-                <p class="feature-text text-reveal">
-                    Create a powerful brand that resonates with your audience. We design logos, visual identities, and brand guidelines that make you stand out.
-                </p>
-            </div>
-            <div class="feature-icons">
-                <div class="floating-icon icon-1">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFE5D9"/><text x="30" y="38" text-anchor="middle" font-size="24">🎨</text></svg>
-                </div>
-                <div class="floating-icon icon-2">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#D4EDDA"/><text x="30" y="38" text-anchor="middle" font-size="24">✨</text></svg>
-                </div>
-                <div class="floating-icon icon-3">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#E2D9F3"/><text x="30" y="38" text-anchor="middle" font-size="24">💎</text></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zigzag Divider Green -->
-    <div class="zigzag-divider zigzag-green">
-        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-            <path d="M0 30 L40 0 L80 30 L120 0 L160 30 L200 0 L240 30 L280 0 L320 30 L360 0 L400 30 L440 0 L480 30 L520 0 L560 30 L600 0 L640 30 L680 0 L720 30 L760 0 L800 30 L840 0 L880 30 L920 0 L960 30 L1000 0 L1040 30 L1080 0 L1120 30 L1160 0 L1200 30 L1200 60 L0 60 Z" fill="#2D5A3D"/>
-        </svg>
-    </div>
-
-    <!-- Digital Marketing Section -->
-    <section class="feature-section feature-alt" id="digital">
-        <div class="feature-container">
-            <div class="feature-content">
-                <h2 class="feature-title">
-                    <span class="line"><span class="text-reveal highlight">100% connected</span></span>
-                    <span class="line"><span class="text-reveal">with your audience</span></span>
-                </h2>
-                <p class="feature-text text-reveal">
-                    Data-driven digital marketing campaigns that maximize ROI. We handle SEO, paid ads, email marketing, and analytics to grow your business.
-                </p>
-            </div>
-            <div class="feature-icons">
-                <div class="floating-icon icon-1">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#D4EDDA"/><text x="30" y="38" text-anchor="middle" font-size="24">📈</text></svg>
-                </div>
-                <div class="floating-icon icon-2">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFF3CD"/><text x="30" y="38" text-anchor="middle" font-size="24">🎯</text></svg>
-                </div>
-                <div class="floating-icon icon-3">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#CCE5FF"/><text x="30" y="38" text-anchor="middle" font-size="24">💰</text></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zigzag Divider -->
-    <div class="zigzag-divider">
-        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-            <path d="M0 30 L40 0 L80 30 L120 0 L160 30 L200 0 L240 30 L280 0 L320 30 L360 0 L400 30 L440 0 L480 30 L520 0 L560 30 L600 0 L640 30 L680 0 L720 30 L760 0 L800 30 L840 0 L880 30 L920 0 L960 30 L1000 0 L1040 30 L1080 0 L1120 30 L1160 0 L1200 30 L1200 60 L0 60 Z" fill="#fe8e24"/>
-        </svg>
-    </div>
-
-    <!-- Social Media Section -->
-    <section class="feature-section" id="social">
-        <div class="feature-container">
-            <div class="feature-content">
-                <h2 class="feature-title">
-                    <span class="line"><span class="text-reveal">Engage your</span></span>
-                    <span class="line"><span class="text-reveal highlight">community</span></span>
-                </h2>
-                <p class="feature-text text-reveal">
-                    Strategic social media management that builds loyal communities. Content creation, scheduling, engagement, and growth strategies across all platforms.
-                </p>
-            </div>
-            <div class="feature-icons">
-                <div class="floating-icon icon-1">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFE5D9"/><text x="30" y="38" text-anchor="middle" font-size="24">📱</text></svg>
-                </div>
-                <div class="floating-icon icon-2">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#E2D9F3"/><text x="30" y="38" text-anchor="middle" font-size="24">💬</text></svg>
-                </div>
-                <div class="floating-icon icon-3">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#D4EDDA"/><text x="30" y="38" text-anchor="middle" font-size="24">❤️</text></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zigzag Divider Blue -->
-    <div class="zigzag-divider zigzag-blue">
-        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-            <path d="M0 30 L40 0 L80 30 L120 0 L160 30 L200 0 L240 30 L280 0 L320 30 L360 0 L400 30 L440 0 L480 30 L520 0 L560 30 L600 0 L640 30 L680 0 L720 30 L760 0 L800 30 L840 0 L880 30 L920 0 L960 30 L1000 0 L1040 30 L1080 0 L1120 30 L1160 0 L1200 30 L1200 60 L0 60 Z" fill="#5DADE2"/>
-        </svg>
-    </div>
-
-    <!-- Content Creation Section -->
-    <section class="feature-section feature-alt-2">
-        <div class="feature-container">
-            <div class="feature-content">
-                <h2 class="feature-title">
-                    <span class="line"><span class="text-reveal highlight">Creative</span></span>
-                    <span class="line"><span class="text-reveal">content that converts</span></span>
-                </h2>
-                <p class="feature-text text-reveal">
-                    Captivating visuals, videos, and copy that tell your story and inspire action. From photography to motion graphics, we create content that stands out.
-                </p>
-            </div>
-            <div class="feature-icons">
-                <div class="floating-icon icon-1">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFF3CD"/><text x="30" y="38" text-anchor="middle" font-size="24">🎬</text></svg>
-                </div>
-                <div class="floating-icon icon-2">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFE5D9"/><text x="30" y="38" text-anchor="middle" font-size="24">📸</text></svg>
-                </div>
-                <div class="floating-icon icon-3">
-                    <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#CCE5FF"/><text x="30" y="38" text-anchor="middle" font-size="24">✍️</text></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="pricing-container">
-            <h2 class="pricing-title">
-                <span class="line"><span class="text-reveal">Our</span></span>
-                <span class="line"><span class="text-reveal highlight">Pricing</span></span>
-            </h2>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p class="pricing-desc">For small businesses</p>
-                    <div class="pricing-price">
-                        <span class="currency">$</span>
-                        <span class="amount">1,500</span>
-                        <span class="period">/mo</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>2 Social Platforms</li>
-                        <li>8 Posts/Month</li>
-                        <li>Basic Analytics</li>
-                        <li>Email Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
-                </div>
-
-                <div class="pricing-card pricing-featured">
-                    <div class="pricing-badge">Popular</div>
-                    <h3>Growth</h3>
-                    <p class="pricing-desc">For growing brands</p>
-                    <div class="pricing-price">
-                        <span class="currency">$</span>
-                        <span class="amount">3,500</span>
-                        <span class="period">/mo</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>4 Social Platforms</li>
-                        <li>20 Posts/Month</li>
-                        <li>Paid Ads Management</li>
-                        <li>Weekly Reports</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <p class="pricing-desc">Full-service</p>
-                    <div class="pricing-price">
-                        <span class="amount">Custom</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Everything in Growth</li>
-                        <li>Dedicated Manager</li>
-                        <li>Video Production</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <h2 class="contact-title">
-                <span class="line"><span class="text-reveal">Let's</span></span>
-                <span class="line"><span class="text-reveal highlight">work together</span></span>
-            </h2>
-            <p class="contact-subtitle text-reveal">Have a project in mind? We'd love to hear from you.</p>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your email" required>
+        <!-- Trusted By Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto text-center">
+                <span class="font-label text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-4">Trusted Partners</span>
+                <h2 class="font-headline font-bold text-3xl md:text-4xl tracking-tighter text-on-surface mb-4">Trusted by Visionaries</h2>
+                <p class="font-body text-secondary text-sm max-w-md mx-auto mb-16">Partnering with forward-thinking brands to deliver exceptional creative results.</p>
+                <div class="relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
+                    <div class="flex gap-20 md:gap-28 items-center animate-marquee" id="clientMarquee" style="width: max-content;">
+                        <!-- First set -->
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">VOGUE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">NIKE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">TESLA</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">APPLE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">CHANEL</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">GUCCI</span>
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">VOGUE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">NIKE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">TESLA</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">APPLE</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">CHANEL</span>
+                        </div>
+                        <div class="flex-shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                            <span class="font-headline font-black text-2xl md:text-3xl tracking-tighter select-none">GUCCI</span>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <span class="footer-logo">DUSK<span class="logo-accent">°</span></span>
-                    <p>Illuminating brands in the digital landscape.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#" aria-label="Twitter">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
+                <!-- Stats row -->
+                <div class="grid grid-cols-3 gap-8 mt-20 max-w-lg mx-auto">
+                    <div>
+                        <span class="font-headline font-bold text-3xl md:text-4xl text-on-surface block">50+</span>
+                        <span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Clients</span>
+                    </div>
+                    <div class="border-x border-surface-container-high">
+                        <span class="font-headline font-bold text-3xl md:text-4xl text-on-surface block">200+</span>
+                        <span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Projects</span>
+                    </div>
+                    <div>
+                        <span class="font-headline font-bold text-3xl md:text-4xl text-on-surface block">98%</span>
+                        <span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary">Retention</span>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Dusk Media. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+        </section>
+
+        <!-- Circular 3D Gallery -->
+        <section class="py-20 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center mb-12">
+                <h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tighter text-on-surface">Our <span class="text-primary">Portfolio.</span></h2>
+            </div>
+            <div id="circularGallery" style="width:100%; height:500px; perspective:2000px; position:relative; display:flex; align-items:center; justify-content:center; cursor:grab;">
+                <div id="circularTrack" style="position:relative; width:100%; height:100%; transform-style:preserve-3d;"></div>
+            </div>
+
+            <!-- Teaser Strip + View All -->
+            <div class="mt-20 text-center">
+                <p class="font-body text-secondary text-sm mb-6">A glimpse of our recent work</p>
+                <div class="relative max-w-2xl mx-auto overflow-hidden rounded-2xl" style="height:120px; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                    <div class="flex gap-3 animate-marquee-slow absolute top-0 left-0" style="width: max-content;">
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwfesA2oHKNnAzbeagbuAdeAlXr3dxfQqsICItvUo-DtUu2dMddxBuww5CNnhD6eOXREG175Wnii0zeV8Y7f57RuwSF0ESLayoP9dY7X-d5LIThjcL215honbF9E8C5WGSTtyEZ5WmlLbHIyHLUQHSY_7Bmo5AIMVTnKTKuYQvC3_GSWh3V1NqTG7rK4rT0AU26Ov24T0EHu8h1G3DAzQLiODk4Wy7bEHPCSiXybZLOMABIYYaxXSEAVrGUWVfhWMTb0Py5Mn1PbC" alt=""/>
+                        <!-- duplicate for loop -->
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR" alt=""/>
+                        <img class="h-[120px] w-[180px] object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwfesA2oHKNnAzbeagbuAdeAlXr3dxfQqsICItvUo-DtUu2dMddxBuww5CNnhD6eOXREG175Wnii0zeV8Y7f57RuwSF0ESLayoP9dY7X-d5LIThjcL215honbF9E8C5WGSTtyEZ5WmlLbHIyHLUQHSY_7Bmo5AIMVTnKTKuYQvC3_GSWh3V1NqTG7rK4rT0AU26Ov24T0EHu8h1G3DAzQLiODk4Wy7bEHPCSiXybZLOMABIYYaxXSEAVrGUWVfhWMTb0Py5Mn1PbC" alt=""/>
+                    </div>
                 </div>
+                <button onclick="openGalleryModal()" class="mt-8 inline-flex items-center gap-3 px-8 py-4 rounded-full border border-on-surface/10 bg-white/50 backdrop-blur-md hover:bg-white/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group">
+                    <span class="font-label text-sm font-bold uppercase tracking-[0.1em] text-on-surface">View All Photos</span>
+                    <span class="material-symbols-outlined text-primary text-[20px] group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                </button>
+            </div>
+
+            <!-- Before & After Comparison -->
+            <div class="mt-24 max-w-2xl mx-auto">
+                <div class="text-center mb-10">
+                    <span class="font-label text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-3">The Difference We Make</span>
+                    <h3 class="font-headline font-bold text-3xl md:text-4xl tracking-tighter text-on-surface">Before & After</h3>
+                    <p class="font-body text-secondary text-sm mt-3">Drag the slider to see the transformation</p>
+                </div>
+
+                <div id="compareContainer" style="position:relative; width:100%; aspect-ratio:16/10; border-radius:20px; overflow:hidden; cursor:col-resize; box-shadow:0 20px 60px rgba(0,0,0,0.12); user-select:none; -webkit-user-select:none;">
+                    <!-- After (bottom layer) -->
+                    <img id="compareAfter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc" alt="After" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"/>
+                    <!-- Before (top layer, clipped) -->
+                    <div id="compareBeforeClip" style="position:absolute; top:0; left:0; width:50%; height:100%; overflow:hidden;">
+                        <div id="compareBefore" style="position:absolute; top:0; left:0; width:100vw; height:100%; background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc'); background-size:cover; background-position:center; filter:grayscale(100%) brightness(0.7) contrast(0.9);"></div>
+                    </div>
+                    <!-- Slider line -->
+                    <div id="compareLine" style="position:absolute; top:0; bottom:0; left:50%; width:3px; background:white; transform:translateX(-50%); z-index:10; box-shadow:0 0 10px rgba(0,0,0,0.3);"></div>
+                    <!-- Slider handle -->
+                    <div id="compareHandle" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:20; width:48px; height:48px; border-radius:50%; background:white; box-shadow:0 4px 20px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; gap:2px;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" style="transform:rotate(180deg)"><path d="M7 1L1 7l6 6" stroke="#fe8e24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="#fe8e24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <!-- Labels -->
+                    <span style="position:absolute; top:16px; left:16px; z-index:5; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); color:white; font-family:Manrope,sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; padding:6px 14px; border-radius:100px;">Before</span>
+                    <span style="position:absolute; top:16px; right:16px; z-index:5; background:rgba(254,142,36,0.85); backdrop-filter:blur(8px); color:white; font-family:Manrope,sans-serif; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; padding:6px 14px; border-radius:100px;">After</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Grid -->
+        <section class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-16">
+                    <h2 class="font-headline font-bold text-5xl tracking-tighter">Project <br/><span class="text-primary">Chronicles.</span></h2>
+                    <div class="hidden md:block">
+                        <button class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant group">
+                            Explore Archive
+                            <span class="w-12 h-[1px] bg-primary group-hover:w-16 transition-all duration-500"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                    <!-- Project 1: Vertical -->
+                    <div class="md:col-span-5 group cursor-pointer">
+                        <div class="aspect-[4/5] overflow-hidden rounded-xl relative glass-card hover-reveal">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R"/>
+                            <div class="absolute inset-0 bg-black/40 overlay flex items-center justify-center backdrop-blur-sm">
+                                <span class="text-white font-bold tracking-widest text-xs uppercase border border-white/30 px-6 py-3 rounded-full">View Narrative</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 transition-transform group-hover:translate-x-2 duration-300">
+                            <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Cinematography / 2024</span>
+                            <h4 class="font-headline font-bold text-xl mt-2">Inner Light Study</h4>
+                        </div>
+                    </div>
+                    <!-- Project 2 & 3 -->
+                    <div class="md:col-span-7 flex flex-col gap-12">
+                        <div class="aspect-[16/9] overflow-hidden rounded-xl relative group glass-card hover-reveal cursor-pointer">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi"/>
+                            <div class="absolute top-6 right-6">
+                                <span class="bg-white/30 backdrop-blur-md border border-white/40 px-3 py-1 rounded-full text-white text-[10px] uppercase font-bold">Featured Production</span>
+                            </div>
+                            <div class="absolute inset-0 bg-black/40 overlay flex items-center justify-center backdrop-blur-sm">
+                                <span class="text-white font-bold tracking-widest text-xs uppercase border border-white/30 px-6 py-3 rounded-full">Explore Setup</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-12">
+                            <div class="group cursor-pointer">
+                                <div class="aspect-square overflow-hidden rounded-xl relative glass-card hover-reveal">
+                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy"/>
+                                </div>
+                                <div class="mt-6 transition-transform group-hover:translate-x-2 duration-300">
+                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-widest">Editorial</span>
+                                    <h4 class="font-headline font-bold text-lg mt-1">Brutalist Echoes</h4>
+                                </div>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <div class="aspect-square overflow-hidden rounded-xl relative glass-card hover-reveal">
+                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR"/>
+                                </div>
+                                <div class="mt-6 transition-transform group-hover:translate-x-2 duration-300">
+                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-widest">BTS</span>
+                                    <h4 class="font-headline font-bold text-lg mt-1">The Process</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 px-6">
+            <div class="max-w-5xl mx-auto bg-on-surface rounded-2xl overflow-hidden relative editorial-shadow group">
+                <div class="absolute inset-0 opacity-40 pointer-events-none transition-transform duration-1000 group-hover:scale-110">
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwfesA2oHKNnAzbeagbuAdeAlXr3dxfQqsICItvUo-DtUu2dMddxBuww5CNnhD6eOXREG175Wnii0zeV8Y7f57RuwSF0ESLayoP9dY7X-d5LIThjcL215honbF9E8C5WGSTtyEZ5WmlLbHIyHLUQHSY_7Bmo5AIMVTnKTKuYQvC3_GSWh3V1NqTG7rK4rT0AU26Ov24T0EHu8h1G3DAzQLiODk4Wy7bEHPCSiXybZLOMABIYYaxXSEAVrGUWVfhWMTb0Py5Mn1PbC"/>
+                </div>
+                <div class="relative z-10 p-12 md:p-24 text-center backdrop-blur-sm bg-black/20">
+                    <h2 class="font-headline font-bold text-4xl md:text-6xl text-white tracking-tighter mb-8 transition-transform duration-700 group-hover:-translate-y-2">Ready to define <br/><span class="text-primary-container italic">your brand's dusk?</span></h2>
+                    <p class="text-surface-variant font-body text-lg max-w-xl mx-auto mb-12">
+                        We are currently accepting new projects for the 2024 editorial season. Let's create something immortal together.
+                    </p>
+                    <button class="glass-button text-on-primary px-12 py-5 rounded-lg font-bold text-lg tracking-tight">Inquire Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/30 backdrop-blur-lg w-full py-12 px-6 mt-auto border-t border-white/20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="text-[#1a1c1c]">
+                <p class="font-['Manrope'] text-xs uppercase tracking-widest opacity-60">&copy; 2025 Dusk Media. All rights reserved.</p>
+            </div>
+            <div class="flex gap-10">
+                <a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c] hover:text-[#fe8e24] transition-all duration-300 hover:-translate-y-1 block" href="#">Instagram</a>
+                <a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c] hover:text-[#fe8e24] transition-all duration-300 hover:-translate-y-1 block" href="#">Vimeo</a>
+                <a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c] hover:text-[#fe8e24] transition-all duration-300 hover:-translate-y-1 block" href="#">LinkedIn</a>
+                <a class="font-['Manrope'] text-xs uppercase tracking-widest text-[#1a1c1c] hover:text-[#fe8e24] transition-all duration-300 hover:-translate-y-1 block" href="#">Privacy</a>
             </div>
         </div>
     </footer>
 
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); align-items:center; justify-content:center; cursor:zoom-out;" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" style="position:absolute; top:20px; right:20px; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); color:white; width:44px; height:44px; border-radius:50%; font-size:1.4rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseenter="this.style.background='rgba(255,255,255,0.3)'" onmouseleave="this.style.background='rgba(255,255,255,0.15)'">&times;</button>
+        <div onclick="event.stopPropagation()" style="max-width:90vw; max-height:85vh; position:relative; cursor:default;">
+            <img id="lightboxImg" src="" alt="" style="max-width:90vw; max-height:75vh; object-fit:contain; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,0.5);"/>
+            <div id="lightboxCaption" style="text-align:center; margin-top:16px;">
+                <h3 style="color:white; font-family:Epilogue,sans-serif; font-size:1.3rem; font-weight:700; margin:0;"></h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; margin-top:4px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Gallery Modal -->
+    <div id="galleryModal" style="display:none; position:fixed; inset:0; z-index:9998; background:rgba(249,249,249,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); overflow-y:auto;">
+        <!-- Header -->
+        <div style="position:sticky; top:0; z-index:10; padding:20px 24px; display:flex; justify-content:space-between; align-items:center; background:rgba(249,249,249,0.9); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(0,0,0,0.06);">
+            <div>
+                <h2 style="font-family:Epilogue,sans-serif; font-size:1.5rem; font-weight:700; color:#1a1c1c; margin:0;">Gallery</h2>
+                <p style="font-family:Manrope,sans-serif; font-size:0.75rem; color:#5f5e5e; margin:4px 0 0; text-transform:uppercase; letter-spacing:0.1em;" id="galleryCount"></p>
+            </div>
+            <button onclick="closeGalleryModal()" style="width:44px; height:44px; border-radius:50%; border:1px solid rgba(0,0,0,0.1); background:white; color:#1a1c1c; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:0 2px 8px rgba(0,0,0,0.06);" onmouseenter="this.style.background='#1a1c1c';this.style.color='white'" onmouseleave="this.style.background='white';this.style.color='#1a1c1c'">&times;</button>
+        </div>
+        <!-- Masonry Grid -->
+        <div style="padding:24px; max-width:1200px; margin:0 auto;">
+            <div id="galleryGrid" class="md:!columns-3" style="columns:2; column-gap:16px;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+    var galleryPhotos = [
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc', title: 'Midnight in Provence', sub: 'Cinematic / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R', title: 'Inner Light Study', sub: 'Photography / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi', title: 'Golden Hour Sessions', sub: 'Production / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy', title: 'Brutalist Echoes', sub: 'Editorial / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR', title: 'The Process', sub: 'Behind the Scenes' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBvwfesA2oHKNnAzbeagbuAdeAlXr3dxfQqsICItvUo-DtUu2dMddxBuww5CNnhD6eOXREG175Wnii0zeV8Y7f57RuwSF0ESLayoP9dY7X-d5LIThjcL215honbF9E8C5WGSTtyEZ5WmlLbHIyHLUQHSY_7Bmo5AIMVTnKTKuYQvC3_GSWh3V1NqTG7rK4rT0AU26Ov24T0EHu8h1G3DAzQLiODk4Wy7bEHPCSiXybZLOMABIYYaxXSEAVrGUWVfhWMTb0Py5Mn1PbC', title: 'Brand Vision', sub: 'Strategy / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_EXgSoirMQHCtzzRRS1lMvgwEpgUvWb3V_mElr680ZQFSxl_m4aYbQDEgpuJVYgDZUt4LJdbIr24VKaLz19zUCJVwITnQgEwYknvr2YT3gNx-8A6Dh2v6P_cf_gZqfp91jYlf0dDcSVMWVCklUw_dMH1GxyvMwpUK4oQ33uGzv5RLMALLV7y9ovZ0zYAFQieFe5mhEJFyUSOkXmzNi_Hh0w1CvAdwWbK5LYxqUjcpdfKK7Aw6ZLh167_umhG0Wf-PIpiiM3K0jo00', title: 'Dusk Portrait', sub: 'Portrait / 2024' },
+        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc', title: 'Evening Glow', sub: 'Cinematic / 2024' },
+    ];
+
+    function openGalleryModal() {
+        var modal = document.getElementById('galleryModal');
+        var grid = document.getElementById('galleryGrid');
+        var count = document.getElementById('galleryCount');
+        grid.innerHTML = '';
+        count.textContent = galleryPhotos.length + ' photos';
+        var heights = ['280px','340px','240px','320px','260px','360px','300px','250px'];
+        galleryPhotos.forEach(function(photo, i) {
+            var item = document.createElement('div');
+            item.style.cssText = 'break-inside:avoid; margin-bottom:16px; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; opacity:0; transform:translateY(20px); transition:all 0.4s ease ' + (i * 0.06) + 's;';
+            item.innerHTML = '<img src="' + photo.url + '" alt="' + photo.title + '" style="width:100%; height:' + heights[i % heights.length] + '; object-fit:cover; display:block; transition:transform 0.5s ease;">' +
+                '<div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%); opacity:0; transition:opacity 0.3s ease; display:flex; align-items:flex-end; padding:16px;">' +
+                '<div><h4 style="color:white; font-family:Epilogue,sans-serif; font-size:1rem; font-weight:700; margin:0;">' + photo.title + '</h4>' +
+                '<span style="color:rgba(255,255,255,0.6); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">' + photo.sub + '</span></div></div>';
+            item.onmouseenter = function() {
+                this.querySelector('div').style.opacity = '1';
+                this.querySelector('img').style.transform = 'scale(1.05)';
+            };
+            item.onmouseleave = function() {
+                this.querySelector('div').style.opacity = '0';
+                this.querySelector('img').style.transform = 'scale(1)';
+            };
+            (function(p) {
+                item.onclick = function() { openLightbox(p.url, p.title, p.sub); };
+            })(photo);
+            grid.appendChild(item);
+            setTimeout(function() {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 50);
+        });
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryModal() {
+        document.getElementById('galleryModal').style.display = 'none';
+        if (document.getElementById('lightbox').style.display !== 'flex') {
+            document.body.style.overflow = '';
+        }
+    }
+    </script>
+
+    <script>
+    function openLightbox(url, title, subtitle) {
+        var lb = document.getElementById('lightbox');
+        document.getElementById('lightboxImg').src = url;
+        document.getElementById('lightboxImg').alt = title;
+        document.getElementById('lightboxCaption').querySelector('h3').textContent = title;
+        document.getElementById('lightboxCaption').querySelector('p').textContent = subtitle;
+        lb.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                closeLightbox();
+            } else if (document.getElementById('galleryModal').style.display === 'block') {
+                closeGalleryModal();
+            }
+        }
+    });
+
+    </script>
+
+    <script>
+    // Hero Carousel
+    (function() {
+        var currentSlide = 0;
+        var track = document.getElementById('heroTrack');
+        var slides = track.querySelectorAll('.carousel-hero-slide');
+        var total = slides.length;
+        var dotsContainer = document.getElementById('heroDots');
+        var startX = 0, currentX = 0, isDragging = false;
+        var carousel = document.getElementById('heroCarousel');
+        var labelEl = document.getElementById('heroLabel');
+        var titleEl = document.getElementById('heroTitle');
+        var descEl = document.getElementById('heroDesc');
+
+        // Create dots
+        for (var i = 0; i < total; i++) {
+            var dot = document.createElement('button');
+            dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-primary w-6' : 'bg-white/60');
+            dot.setAttribute('data-index', i);
+            dot.onclick = function() { goTo(parseInt(this.getAttribute('data-index'))); };
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateInfoCard(index) {
+            var slide = slides[index];
+            labelEl.textContent = slide.getAttribute('data-label');
+            titleEl.textContent = slide.getAttribute('data-title');
+            descEl.textContent = slide.getAttribute('data-desc');
+        }
+
+        function goTo(index) {
+            if (index < 0) index = total - 1;
+            if (index >= total) index = 0;
+            currentSlide = index;
+            track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            updateInfoCard(currentSlide);
+            var dots = dotsContainer.children;
+            for (var j = 0; j < dots.length; j++) {
+                dots[j].className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (j === currentSlide ? 'bg-primary w-6' : 'bg-white/60');
+            }
+        }
+
+        window.heroCarouselNav = function(dir) { goTo(currentSlide + dir); };
+
+        // Touch/swipe support
+        carousel.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            track.style.transition = 'none';
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX;
+            var diff = currentX - startX;
+            var offset = -(currentSlide * carousel.offsetWidth) + diff;
+            track.style.transform = 'translateX(' + offset + 'px)';
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function() {
+            isDragging = false;
+            track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+            var diff = currentX - startX;
+            if (Math.abs(diff) > 50) {
+                goTo(currentSlide + (diff < 0 ? 1 : -1));
+            } else {
+                goTo(currentSlide);
+            }
+        });
+
+        // Mouse drag support
+        carousel.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            startX = e.clientX;
+            currentX = startX;
+            track.style.transition = 'none';
+            carousel.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            currentX = e.clientX;
+            var diff = currentX - startX;
+            var offset = -(currentSlide * carousel.offsetWidth) + diff;
+            track.style.transform = 'translateX(' + offset + 'px)';
+        });
+
+        document.addEventListener('mouseup', function() {
+            if (!isDragging) return;
+            isDragging = false;
+            track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+            carousel.style.cursor = '';
+            var diff = currentX - startX;
+            if (Math.abs(diff) > 50) {
+                goTo(currentSlide + (diff < 0 ? 1 : -1));
+            } else {
+                goTo(currentSlide);
+            }
+        });
+
+        // Auto-advance every 5 seconds
+        setInterval(function() { if (!isDragging) goTo(currentSlide + 1); }, 5000);
+    })();
+
+    // Before & After Slider
+    (function() {
+        var container = document.getElementById('compareContainer');
+        var clip = document.getElementById('compareBeforeClip');
+        var beforeDiv = document.getElementById('compareBefore');
+        var line = document.getElementById('compareLine');
+        var handle = document.getElementById('compareHandle');
+        var dragging = false;
+
+        function syncBeforeSize() {
+            beforeDiv.style.width = container.offsetWidth + 'px';
+            beforeDiv.style.height = container.offsetHeight + 'px';
+        }
+        syncBeforeSize();
+        window.addEventListener('resize', syncBeforeSize);
+
+        function setPosition(x) {
+            var rect = container.getBoundingClientRect();
+            var pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+            var percent = pct * 100;
+            clip.style.width = percent + '%';
+            line.style.left = percent + '%';
+            handle.style.left = percent + '%';
+        }
+
+        container.addEventListener('mousedown', function(e) {
+            dragging = true;
+            setPosition(e.clientX);
+            e.preventDefault();
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (!dragging) return;
+            setPosition(e.clientX);
+        });
+        document.addEventListener('mouseup', function() {
+            dragging = false;
+        });
+
+        container.addEventListener('touchstart', function(e) {
+            dragging = true;
+            setPosition(e.touches[0].clientX);
+        }, { passive: true });
+        container.addEventListener('touchmove', function(e) {
+            if (!dragging) return;
+            setPosition(e.touches[0].clientX);
+            e.preventDefault();
+        }, { passive: false });
+        container.addEventListener('touchend', function() {
+            dragging = false;
+        });
+    })();
+
+    // Circular 3D Gallery
+    (function() {
+        var galleryItems = [
+            { title: 'Midnight Provence', subtitle: 'Cinematic / 2024', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1i83W5ouNU_k0LsEAFm0Mo9FSRqzj8UetrVKaPPLC7G2fef3DYxapV-Gg3ZdV3wqYWYMS53YOoqF0dT8kTw0XLBf16npVED0VxVH59_ZxuBb9hjHS1JuTc_3N24Pp8adbC4a22744C-TBZViPr9qBBeB_CsRxMmm5EhdiOyix9rokNfqm2g9wpMmMCh_uiizXIN5GLSpDrv4D8u4kuxCVNyYIpg_tpLyBhNKCJeshsqLw-w7oCTxFLnVyuzd3cm2ssJZ3zhTiQFRc' },
+            { title: 'Inner Light', subtitle: 'Photography / 2024', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkRobatkC1b99VnlenDwzD5XjyVupx8mWujY4kC5v6Pja9AcYd7gznHlCb7pqdUlxHyyX1qilmR2HoM0xIzEzJijpxV0SFcKELlc4GEdbw7VgucvKnXmmVelEnTJCC51z9B--8ACHo5KaxPHxB_3cvvqOj-XMNTd_L2Md_JzaCbjhEWO3fu7J2ITSYS0itmE9b3G2prSTPrTJd3xFACrROXvRLTfvr7eSm1v-CP_szM8_5lWSeFjnV4G8ielE5aEzA-sFFRQCwDE-R' },
+            { title: 'Golden Hour', subtitle: 'Production / 2024', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNrsBqo5SU23TQXGHbDnZ0TtBk8-GHPN_1UBlFG36osXtvqMISAvn0tFzVl91AL02MGXc0zypw51_eTIE6G4re_PrmK09YwsGLRrC1pIuMaOI2mrP_gxDTl6musiqZMQHlR0cGy-5M43hgzh3mbL6Jt1iVRk_JrE07qLLCHZS5ueibzRjDZ5q4xvr9IhGbKh2OlvIXwM8Gv6R802vK-NDfgLgL6D09cQnZq4q-rDsThrWXktt8T_E5fGzHGfofRmbEfWAvXf1GKZFi' },
+            { title: 'Brutalist Echoes', subtitle: 'Editorial / 2024', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8HwQk_SUzd_PzLURzdx-Q1Nrpg-OW_xKmM0sPTCI-ouEpnAmopXb6uUjVUpxX_3HLjwHRwEvwB0gKPT30S3KXmhB7vm8iWKRsJPRcLlRbiEZ_WHw1ixFJXoYptPrcPznIx4lzeI0YFmZKiVbf2h3-XZYKl7z4yJyTx5LRoHWHGcV0RoiAOe_DIF1DceLh8iBfLUYTOiJh-XDbpr-NRrp_5T2DyQLPrdHK4966NgdBPgjQtjYkULmEyu_Z8RF4I5HRoSDdXQSYIuzy' },
+            { title: 'The Process', subtitle: 'Behind the Scenes', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRvp31JAzNgBSZvMBO4nwEPs3BPYmz2ZNf2nw2zaH9YUEBjvV1FVgNsChFZJP-A35p44IAoPvZBne9ci8w_IxJJ3QcOcgO8sEBjMLid8-y3MQqCOageNKnEe0ijeRRFsTLSKKrtDZJ1MXL4ZvRpGwxDNpOxJoCVdGrizZTVgisWPV64P9so5OCUN-jrJQ5rGc3QxtU3G0pmXGzkwHDEr04jnNmgHD83VJJsD1rDzcG0rkknDmsk2NLsWzym-F_Pmvq0H2oybkjjR' },
+            { title: 'Brand Vision', subtitle: 'Strategy / 2024', by: 'Dusk Media',
+              url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBvwfesA2oHKNnAzbeagbuAdeAlXr3dxfQqsICItvUo-DtUu2dMddxBuww5CNnhD6eOXREG175Wnii0zeV8Y7f57RuwSF0ESLayoP9dY7X-d5LIThjcL215honbF9E8C5WGSTtyEZ5WmlLbHIyHLUQHSY_7Bmo5AIMVTnKTKuYQvC3_GSWh3V1NqTG7rK4rT0AU26Ov24T0EHu8h1G3DAzQLiODk4Wy7bEHPCSiXybZLOMABIYYaxXSEAVrGUWVfhWMTb0Py5Mn1PbC' },
+        ];
+
+        var track = document.getElementById('circularTrack');
+        var gallery = document.getElementById('circularGallery');
+        var rotation = 0;
+        var isScrolling = false;
+        var scrollTimeout = null;
+        var isDragging = false;
+        var dragStartX = 0;
+        var dragRotation = 0;
+        var radius = window.innerWidth < 768 ? 300 : 500;
+        var anglePerItem = 360 / galleryItems.length;
+
+        // Build cards
+        galleryItems.forEach(function(item, i) {
+            var card = document.createElement('div');
+            card.style.cssText = 'position:absolute; width:260px; height:360px; left:50%; top:50%; margin-left:-130px; margin-top:-180px; transition:opacity 0.3s linear; border-radius:12px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); cursor:pointer;';
+            card.innerHTML = '<img src="' + item.url + '" alt="' + item.title + '" style="width:100%;height:100%;object-fit:cover; pointer-events:none;">' +
+                '<div style="position:absolute;bottom:0;left:0;width:100%;padding:16px;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);color:white; pointer-events:none;">' +
+                '<h3 style="font-family:Epilogue,sans-serif;font-size:1.2rem;font-weight:700;margin:0;">' + item.title + '</h3>' +
+                '<em style="font-size:0.8rem;opacity:0.8;">' + item.subtitle + '</em>' +
+                '<p style="font-size:0.7rem;margin-top:6px;opacity:0.6;">By: ' + item.by + '</p>' +
+                '</div>';
+            (function(cardItem) {
+                var clickStartX = 0;
+                card.addEventListener('mousedown', function(e) { clickStartX = e.clientX; });
+                card.addEventListener('mouseup', function(e) {
+                    if (Math.abs(e.clientX - clickStartX) < 5) {
+                        openLightbox(cardItem.url, cardItem.title, cardItem.subtitle);
+                    }
+                });
+                card.addEventListener('touchstart', function(e) { clickStartX = e.touches[0].clientX; }, { passive: true });
+                card.addEventListener('touchend', function(e) {
+                    var endX = e.changedTouches[0].clientX;
+                    if (Math.abs(endX - clickStartX) < 5) {
+                        openLightbox(cardItem.url, cardItem.title, cardItem.subtitle);
+                    }
+                });
+            })(item);
+            card.setAttribute('data-angle', i * anglePerItem);
+            track.appendChild(card);
+        });
+
+        var cards = track.querySelectorAll('div');
+
+        function render() {
+            cards.forEach(function(card) {
+                var itemAngle = parseFloat(card.getAttribute('data-angle'));
+                var relAngle = ((itemAngle + rotation) % 360 + 360) % 360;
+                var normAngle = Math.abs(relAngle > 180 ? 360 - relAngle : relAngle);
+                var opacity = Math.max(0.2, 1 - (normAngle / 180));
+                card.style.transform = 'rotateY(' + itemAngle + 'deg) translateZ(' + radius + 'px)';
+                card.style.opacity = opacity;
+            });
+            track.style.transform = 'rotateY(' + rotation + 'deg)';
+        }
+
+        // Scroll-based rotation
+        window.addEventListener('scroll', function() {
+            isScrolling = true;
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+            rotation = progress * 360;
+            render();
+            scrollTimeout = setTimeout(function() { isScrolling = false; }, 150);
+        }, { passive: true });
+
+        // Auto-rotate
+        function autoRotate() {
+            if (!isScrolling && !isDragging) {
+                rotation -= 0.15;
+                render();
+            }
+            requestAnimationFrame(autoRotate);
+        }
+        requestAnimationFrame(autoRotate);
+
+        // Mouse drag rotation
+        gallery.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            dragStartX = e.clientX;
+            dragRotation = rotation;
+            gallery.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            var diff = e.clientX - dragStartX;
+            rotation = dragRotation + diff * 0.3;
+            render();
+        });
+        document.addEventListener('mouseup', function() {
+            if (!isDragging) return;
+            isDragging = false;
+            gallery.style.cursor = 'grab';
+        });
+
+        // Touch drag rotation
+        gallery.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            dragStartX = e.touches[0].clientX;
+            dragRotation = rotation;
+        }, { passive: true });
+        gallery.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            var diff = e.touches[0].clientX - dragStartX;
+            rotation = dragRotation + diff * 0.3;
+            render();
+        }, { passive: true });
+        gallery.addEventListener('touchend', function() {
+            isDragging = false;
+        });
+
+        // Responsive radius
+        window.addEventListener('resize', function() {
+            radius = window.innerWidth < 768 ? 300 : 500;
+            render();
+        });
+
+        render();
+    })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

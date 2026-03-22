@@ -9,17 +9,20 @@ const contactForm = document.getElementById('contactForm');
 // ===== Mobile Menu =====
 let menuOpen = false;
 
+const menuIconOpen = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+const menuIconClose = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>';
+
 const toggleMenu = () => {
     menuOpen = !menuOpen;
 
     if (menuOpen) {
         mobileMenu.classList.add('active');
         navContainer.classList.add('menu-open');
-        menuBtn.textContent = 'Close';
+        menuBtn.innerHTML = menuIconClose;
     } else {
         mobileMenu.classList.remove('active');
         navContainer.classList.remove('menu-open');
-        menuBtn.textContent = 'Menu';
+        menuBtn.innerHTML = menuIconOpen;
     }
 };
 
@@ -27,7 +30,7 @@ const closeMenu = () => {
     menuOpen = false;
     mobileMenu.classList.remove('active');
     navContainer.classList.remove('menu-open');
-    menuBtn.textContent = 'Menu';
+    menuBtn.innerHTML = menuIconOpen;
 };
 
 menuBtn.addEventListener('click', toggleMenu);
