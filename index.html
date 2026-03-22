@@ -398,22 +398,24 @@
                 </div>
                 <!-- Card (Tablet Mockup) -->
                 <div id="scrollCard" style="max-width:64rem; margin:-48px auto 0; width:100%; height:40rem; border:4px solid #6C6C6C; padding:24px; background:#222222; border-radius:30px; will-change:transform; box-shadow:0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;">
-                    <div style="height:100%; width:100%; overflow:hidden; border-radius:16px; background:#fff;">
-                        <iframe src="https://kohicafemenu.netlify.app/" style="width:100%; height:100%; border:none; border-radius:16px;" title="Kohi Cafe Menu"></iframe>
+                    <div style="height:100%; width:100%; overflow:hidden; border-radius:16px; background:#fff; position:relative;">
+                        <iframe id="menuIframe" src="https://kohicafemenu.netlify.app/" style="width:100%; height:100%; border:none; border-radius:16px; pointer-events:none;" title="Kohi Cafe Menu"></iframe>
+                        <a href="https://kohicafemenu.netlify.app/" target="_blank" style="position:absolute; inset:0; z-index:5; cursor:pointer;"></a>
                     </div>
-                </div>
-                <!-- View Live Button -->
-                <div style="text-align:center; margin-top:48px;">
-                    <a href="https://kohicafemenu.netlify.app/" target="_blank" class="group relative inline-flex items-center gap-4 px-12 py-5 rounded-full font-bold text-white text-sm overflow-hidden transition-all duration-500 hover:-translate-y-2" style="background:linear-gradient(135deg, #fe8e24 0%, #f0a04b 50%, #fe8e24 100%); background-size:200% 200%; animation:btnShimmer 3s ease infinite; box-shadow:0 8px 30px rgba(254,142,36,0.35), 0 0 0 0 rgba(254,142,36,0.4);" onmouseenter="this.style.boxShadow='0 16px 48px rgba(254,142,36,0.45), 0 0 0 4px rgba(254,142,36,0.15)'" onmouseleave="this.style.boxShadow='0 8px 30px rgba(254,142,36,0.35), 0 0 0 0 rgba(254,142,36,0.4)'">
-                        <span style="position:absolute; inset:0; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transform:translateX(-100%); animation:btnGlare 3s ease-in-out infinite;"></span>
-                        <span class="material-symbols-outlined text-[22px] relative z-10">rocket_launch</span>
-                        <span class="font-label uppercase tracking-[0.12em] relative z-10">See It Live</span>
-                        <span class="material-symbols-outlined text-[18px] relative z-10 group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
-                    </a>
-                    <p class="font-body text-secondary text-xs mt-4 opacity-60">Opens in a new tab</p>
                 </div>
             </div>
         </section>
+
+        <!-- View Live Button -->
+        <div style="text-align:center; position:relative; z-index:50; margin-top:-4rem; margin-bottom:4rem;">
+            <a href="https://kohicafemenu.netlify.app/" target="_blank" class="group relative inline-flex items-center gap-4 px-12 py-5 rounded-full font-bold text-white text-sm overflow-hidden transition-all duration-500 hover:-translate-y-2" style="background:linear-gradient(135deg, #fe8e24 0%, #f0a04b 50%, #fe8e24 100%); background-size:200% 200%; animation:btnShimmer 3s ease infinite; box-shadow:0 8px 30px rgba(254,142,36,0.35), 0 0 0 0 rgba(254,142,36,0.4);" onmouseenter="this.style.boxShadow='0 16px 48px rgba(254,142,36,0.45), 0 0 0 4px rgba(254,142,36,0.15)'" onmouseleave="this.style.boxShadow='0 8px 30px rgba(254,142,36,0.35), 0 0 0 0 rgba(254,142,36,0.4)'">
+                <span style="position:absolute; inset:0; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transform:translateX(-100%); animation:btnGlare 3s ease-in-out infinite; pointer-events:none;"></span>
+                <span class="material-symbols-outlined text-[22px] relative z-10">rocket_launch</span>
+                <span class="font-label uppercase tracking-[0.12em] relative z-10">See It Live</span>
+                <span class="material-symbols-outlined text-[18px] relative z-10 group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+            </a>
+            <p class="font-body text-secondary text-xs mt-4 opacity-60">Opens in a new tab</p>
+        </div>
 
         <!-- CTA Section -->
         <section class="py-32 px-6">
@@ -800,6 +802,8 @@
         var card = document.getElementById('scrollCard');
         var header = document.getElementById('scrollHeader');
         var isMobile = window.innerWidth <= 768;
+        var ticking = false;
+        var lastRotate = 20;
 
         window.addEventListener('resize', function() {
             isMobile = window.innerWidth <= 768;
@@ -814,26 +818,36 @@
             var windowH = window.innerHeight;
             var containerH = container.offsetHeight;
 
-            // Progress: 0 when top of container hits bottom of viewport, 1 when bottom hits top
+            // Skip if section not near viewport
+            if (rect.bottom < -200 || rect.top > windowH + 200) {
+                ticking = false;
+                return;
+            }
+
             var progress = (windowH - rect.top) / (windowH + containerH);
             progress = Math.max(0, Math.min(1, progress));
 
-            // Rotate: 20deg -> 0deg
             var rotate = lerp(20, 0, progress);
-            // Scale: mobile 0.7->0.9, desktop 1.05->1
             var scaleStart = isMobile ? 0.7 : 1.05;
             var scaleEnd = isMobile ? 0.9 : 1;
             var scale = lerp(scaleStart, scaleEnd, progress);
-            // Translate header: 0 -> -100px
             var translate = lerp(0, -100, progress);
 
             card.style.transform = 'rotateX(' + rotate + 'deg) scale(' + scale + ')';
             header.style.transform = 'translateY(' + translate + 'px)';
 
-            requestAnimationFrame(updateScroll);
+            ticking = false;
         }
 
-        requestAnimationFrame(updateScroll);
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateScroll);
+            }
+        }, { passive: true });
+
+        // Initial render
+        updateScroll();
     })();
 
     // Before & After Slider
